@@ -12,9 +12,9 @@ namespace ATMDataAccess.Repository
     {
         private readonly ATMDBContext _context;
 
-        public ATMRepository(ATMDBContext context1)
+        public ATMRepository()
         {
-            _context = context1;
+            _context = new ATMDBContext();
 
         }
         public int Create(AccountModel acctModel)
