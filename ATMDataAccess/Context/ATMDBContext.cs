@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,17 +16,33 @@ namespace ATMDataAccess.Context
 
         }
 
-        protected ATMDBContext()
+        public ATMDBContext()
         {
 
         }
         public DbSet<AccountModel> Account { get; set; }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            if (!optionsBuilder.IsConfigured)
+            {
+                optionsBuilder.LogTo(message => Debug.WriteLine(message))
+                    .EnableSensitiveDataLogging();
+
+                optionsBuilder
+                    .UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
+
+                optionsBuilder.
+                    UseSqlServer("your connection string");
+            }
+        }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<AccountModel>(
                 entity =>
                 {
+                    entity.ToTable("your table name");
                     entity.HasKey(e => e.AccountID);
                     entity.Property(e => e.AccountID);
                     entity.Property(e => e.PinNumber);

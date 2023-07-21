@@ -8,4 +8,4 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = ATMDataAccess
-build_property.ProjectDir = C:\Users\linka\Documents\Project\ATMMVCApplication\ATMDataAccess\
+build_property.ProjectDir = /Users/josemontanez/Developer/Repos/ATMMVCApplication/ATMDataAccess/
