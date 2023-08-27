@@ -1,26 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "/Users/josemontanez/Developer/Repos/ATMMVCApplication/ATMMVCApplication/ATMMVCApplication.csproj": {}
+    "C:\\Users\\linka\\Documents\\Project\\ATMMVCApplication\\ATMMVCApplication\\ATMMVCApplication.csproj": {}
   },
   "projects": {
-    "/Users/josemontanez/Developer/Repos/ATMMVCApplication/ATMDataAccess/ATMDataAccess.csproj": {
+    "C:\\Users\\linka\\Documents\\Project\\ATMMVCApplication\\ATMDataAccess\\ATMDataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/josemontanez/Developer/Repos/ATMMVCApplication/ATMDataAccess/ATMDataAccess.csproj",
+        "projectUniqueName": "C:\\Users\\linka\\Documents\\Project\\ATMMVCApplication\\ATMDataAccess\\ATMDataAccess.csproj",
         "projectName": "ATMDataAccess",
-        "projectPath": "/Users/josemontanez/Developer/Repos/ATMMVCApplication/ATMDataAccess/ATMDataAccess.csproj",
-        "packagesPath": "/Users/josemontanez/.nuget/packages/",
-        "outputPath": "/Users/josemontanez/Developer/Repos/ATMMVCApplication/ATMDataAccess/obj/",
+        "projectPath": "C:\\Users\\linka\\Documents\\Project\\ATMMVCApplication\\ATMDataAccess\\ATMDataAccess.csproj",
+        "packagesPath": "C:\\Users\\linka\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\linka\\Documents\\Project\\ATMMVCApplication\\ATMDataAccess\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/Users/josemontanez/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\linka\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "/usr/local/share/dotnet/library-packs": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -39,6 +45,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "EntityFramework": {
+              "target": "Package",
+              "version": "[6.4.4, )"
+            },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[7.0.9, )"
@@ -60,36 +70,41 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.306/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.103\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Users/josemontanez/Developer/Repos/ATMMVCApplication/ATMMVCApplication/ATMMVCApplication.csproj": {
+    "C:\\Users\\linka\\Documents\\Project\\ATMMVCApplication\\ATMMVCApplication\\ATMMVCApplication.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/josemontanez/Developer/Repos/ATMMVCApplication/ATMMVCApplication/ATMMVCApplication.csproj",
+        "projectUniqueName": "C:\\Users\\linka\\Documents\\Project\\ATMMVCApplication\\ATMMVCApplication\\ATMMVCApplication.csproj",
         "projectName": "ATMMVCApplication",
-        "projectPath": "/Users/josemontanez/Developer/Repos/ATMMVCApplication/ATMMVCApplication/ATMMVCApplication.csproj",
-        "packagesPath": "/Users/josemontanez/.nuget/packages/",
-        "outputPath": "/Users/josemontanez/Developer/Repos/ATMMVCApplication/ATMMVCApplication/obj/",
+        "projectPath": "C:\\Users\\linka\\Documents\\Project\\ATMMVCApplication\\ATMMVCApplication\\ATMMVCApplication.csproj",
+        "packagesPath": "C:\\Users\\linka\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\linka\\Documents\\Project\\ATMMVCApplication\\ATMMVCApplication\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/Users/josemontanez/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\linka\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "/usr/local/share/dotnet/library-packs": {},
-          "/usr/local/share/dotnet/sdk/7.0.306/Sdks/Microsoft.NET.Sdk.Web/library-packs": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "/Users/josemontanez/Developer/Repos/ATMMVCApplication/ATMDataAccess/ATMDataAccess.csproj": {
-                "projectPath": "/Users/josemontanez/Developer/Repos/ATMMVCApplication/ATMDataAccess/ATMDataAccess.csproj"
+              "C:\\Users\\linka\\Documents\\Project\\ATMMVCApplication\\ATMDataAccess\\ATMDataAccess.csproj": {
+                "projectPath": "C:\\Users\\linka\\Documents\\Project\\ATMMVCApplication\\ATMDataAccess\\ATMDataAccess.csproj"
               }
             }
           }
@@ -107,6 +122,10 @@
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[7.0.9, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[6.0.15, )"
             }
           },
           "imports": [
@@ -128,7 +147,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.306/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.103\\RuntimeIdentifierGraph.json"
         }
       }
     }

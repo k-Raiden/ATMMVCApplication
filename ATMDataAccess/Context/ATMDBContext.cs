@@ -33,7 +33,7 @@ namespace ATMDataAccess.Context
                     .UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
 
                 optionsBuilder.
-                    UseSqlServer("your connection string");
+                    UseSqlServer("Server=RAIDEN\\SQLEXPRESS;Database=myDataBase;Trusted_Connection=True;TrustServerCertificate=True;") ;
             }
         }
 
@@ -42,7 +42,7 @@ namespace ATMDataAccess.Context
             modelBuilder.Entity<AccountModel>(
                 entity =>
                 {
-                    entity.ToTable("your table name");
+                    entity.ToTable("Accounts");
                     entity.HasKey(e => e.AccountID);
                     entity.Property(e => e.AccountID);
                     entity.Property(e => e.PinNumber);

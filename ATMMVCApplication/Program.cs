@@ -8,6 +8,7 @@ builder.Services.AddControllersWithViews();
 IConfiguration configuration = new ConfigurationBuilder()
     .AddJsonFile("appsettings.json")
     .AddEnvironmentVariables().Build();
+
 builder.Services.AddDbContext<ATMDBContext>(
     optionsAction =>
     {

@@ -19,6 +19,36 @@ namespace ATMDataAccess.Repository
         }
         public int Create(AccountModel acctModel)
         {
+            Random num = new Random();
+            string result="";
+
+            string numbers = "123456789";
+
+            // random account Number
+
+            for (int i = 0;i<9; i++)
+            {
+                int number = num.Next(0, numbers.Length);
+
+                char c = numbers[number];
+
+                result += c;
+            }
+            acctModel.AccountNumber = Convert.ToInt32(result);
+
+            // random card number
+
+            for (int i = 0; i < 10; i++) 
+            { 
+                int number2 =num.Next(0, numbers.Length);
+
+                char c2 = numbers[number2];
+
+                result += c2;
+            
+            }
+
+            acctModel.CardNumber = Convert.ToInt32(result);
 
             _context.Add(acctModel);
             _context.SaveChanges();
@@ -27,20 +57,24 @@ namespace ATMDataAccess.Repository
 
         }
 
-        public int Update(AccountModel acctModel)
+         public AccountModel Update(AccountModel acctModel)
         {
             AccountModel acctId = _context.Account.Find(acctModel.AccountID);
             acctId.AccountNumber = acctModel.AccountNumber;
             acctId.PinNumber = acctModel.PinNumber;
+            acctId.CardNumber = acctModel.CardNumber;
             acctId.FullName = acctModel.FullName;
             acctId.PreviousBalance = acctModel.PreviousBalance;
             acctId.DepositAmount = acctModel.DepositAmount;
             acctId.TransactionDate = DateTime.UtcNow;
             acctId.NewBalance = acctModel.NewBalance;
             acctId.WithdrawAmount = acctModel.WithdrawAmount;
+
             _context.SaveChanges();
 
-            return acctModel.AccountID;
+            return acctModel;    
+
+            
 
         }
 

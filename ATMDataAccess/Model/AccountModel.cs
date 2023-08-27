@@ -14,20 +14,24 @@ namespace ATMDataAccess.Model
 
         public int AccountID { get; set; }
 
-        public string FullName { get; set; }
+        public string? UserID { get; set; }
+
+        public string ?FullName { get; set; }
 
         public int PinNumber { get; set; }
 
-        public double PreviousBalance { get; set; }
+        public decimal PreviousBalance { get; set; }
 
-        public double DepositAmount { get; set; }
+        public decimal DepositAmount { get; set; }
 
-        public double WithdrawAmount { get; set; }
+        public decimal WithdrawAmount { get; set; }
 
-        public double NewBalance { get; set; }
+        public decimal NewBalance { get; set; }
         public DateTime TransactionDate { get; set; }
+        public string? PassWord { get; set; }   
+        
 
-        public AccountModel(int accountID, int pinNumber, int accountNumber, int cardnumber, string fullName, double previousBalance, double depositAmount, double withdrawAmount, double newBalance, DateTime transactionDate)
+        public AccountModel(int accountID, int pinNumber, int accountNumber, int cardnumber, string fullName, decimal previousBalance, decimal depositAmount, decimal withdrawAmount, decimal newBalance, DateTime transactionDate,string pWord)
         {
             AccountID = accountID;
             AccountNumber = accountNumber;
@@ -39,6 +43,8 @@ namespace ATMDataAccess.Model
             WithdrawAmount = withdrawAmount;
             NewBalance = newBalance;
             TransactionDate = transactionDate;
+            PassWord = pWord;
+
 
 
         }

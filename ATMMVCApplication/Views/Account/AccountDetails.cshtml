@@ -1,0 +1,48 @@
+﻿@model AccountViewModel
+@using ATMDataAccess.Model
+
+<div>
+    <h2>
+        <title> Please select the right customer ! Make sure to Verify their ID</title>
+    </h2>
+</div>
+
+<div>
+        <input type="hidden" name="AccountID" value="@Model.CurrentAccount.AccountID" />
+
+        <div>
+            <label for="AccountNumber">Account Number:</label>
+            <input type="text" id="Anumber" name="AccoutNumber" value="@Model.CurrentAccount.AccountNumber">
+        </div>
+        <div>
+            <label for="FullName">Client Name:</label>
+            <input type="text" id=" FName" name="FullName" value="@Model.CurrentAccount.FullName" >
+        </div>
+        <div>
+            <label for="CardNumber">Card Number:</label>
+            <input type="text" id=" CName" name="CardNumber" value="@Model.CurrentAccount.CardNumber">
+        </div>
+        <div>
+            <label for="UserID">User Identification:</label>
+            <input type="text" id=" UName" name="UserID" value="@Model.CurrentAccount.UserID">
+        </div>
+        <div>
+            <label for="PreviousBalance">Current Balance:</label>
+            <input type="text" id="Pbalance" name="PreviousBalance" value="@Model.CurrentAccount.PreviousBalance">
+        </div>
+        <div>
+            <label for="NewBalance">Updated Balance:</label>
+            <input type="text" id="Nbalance" name="NewBalance" value="@Model.CurrentAccount.NewBalance">
+        </div>
+
+        <div>   
+
+            <a class=" btn btn-primary" href="~/Account/DepositView/@Model.CurrentAccount.AccountID"> Deposit</a> 
+
+            <a class="btn btn-success" href="~/Account/WithdrawView/@Model.CurrentAccount.AccountID">WithDraw</a>
+        </div>
+        
+   
+</div>
+
+ 

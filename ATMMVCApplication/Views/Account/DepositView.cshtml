@@ -1,0 +1,23 @@
+﻿@model AccountViewModel
+<div>
+
+    <h1>
+        Ask Politely how much they would like to depose in their Account!!
+    </h1>
+
+
+    <form method="post" action="~/Account/DepositFunds/AccountDetails">
+
+        <input type="hidden" name="AccountID" value="@Model.CurrentAccount.AccountID" />
+        
+        <div class="mb-3">
+            <label for="DepositAmount" class="form-label">Deposit Amount</label>
+            <input type="number" class="" name="DepositAmount">
+        </div>
+        <div>
+            <button class=" btn btn-primary"type="submit">Click me! </button>
+        </div>
+
+    </form>
+    
+</div>

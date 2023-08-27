@@ -10,22 +10,36 @@ namespace ATMMVCApplication.Models
 
         public int AccountID { get; set; }
 
-        public string FullName { get; set; } = null!;
+        public string? FullName { get; set; }
 
         public int PinNumber { get; set; }
 
-        public double PreviousBalance { get; set; }
+        public decimal PreviousBalance { get; set; }
 
-        public double DepositAmount { get; set; }
+        public decimal DepositAmount { get; set; }
 
-        public double WithdrawAmount { get; set; }
+        public decimal WithdrawAmount { get; set; }
 
-        public double NewBalance { get; set; }
+        public decimal NewBalance { get; set; }
+
+        public string? PassWord { get; set; }
+
+        public string? UserID { get; set; }
 
         public DateTime TransactionDate { get; set; }
+        
 
         public AccountModel? CurrentAccount { get; set; }
 
         public List<AccountModel>? AccountList { get; set; }
+
+        public AccountViewModel() 
+        { 
+            CurrentAccount= new AccountModel();
+            AccountList = new List<AccountModel>();
+        
+        }
     }
+    
+   
 }

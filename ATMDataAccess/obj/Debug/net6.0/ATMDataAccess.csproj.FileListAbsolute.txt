@@ -1,0 +1,14 @@
+C:\Users\linka\Documents\Project\ATMMVCApplication\ATMDataAccess\bin\Debug\net6.0\ATMDataAccess.deps.json
+C:\Users\linka\Documents\Project\ATMMVCApplication\ATMDataAccess\bin\Debug\net6.0\ATMDataAccess.runtimeconfig.json
+C:\Users\linka\Documents\Project\ATMMVCApplication\ATMDataAccess\bin\Debug\net6.0\ATMDataAccess.dll
+C:\Users\linka\Documents\Project\ATMMVCApplication\ATMDataAccess\bin\Debug\net6.0\ATMDataAccess.pdb
+C:\Users\linka\Documents\Project\ATMMVCApplication\ATMDataAccess\obj\Debug\net6.0\ATMDataAccess.csproj.AssemblyReference.cache
+C:\Users\linka\Documents\Project\ATMMVCApplication\ATMDataAccess\obj\Debug\net6.0\ATMDataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\linka\Documents\Project\ATMMVCApplication\ATMDataAccess\obj\Debug\net6.0\ATMDataAccess.AssemblyInfoInputs.cache
+C:\Users\linka\Documents\Project\ATMMVCApplication\ATMDataAccess\obj\Debug\net6.0\ATMDataAccess.AssemblyInfo.cs
+C:\Users\linka\Documents\Project\ATMMVCApplication\ATMDataAccess\obj\Debug\net6.0\ATMDataAccess.csproj.CoreCompileInputs.cache
+C:\Users\linka\Documents\Project\ATMMVCApplication\ATMDataAccess\obj\Debug\net6.0\ATMDataAccess.dll
+C:\Users\linka\Documents\Project\ATMMVCApplication\ATMDataAccess\obj\Debug\net6.0\refint\ATMDataAccess.dll
+C:\Users\linka\Documents\Project\ATMMVCApplication\ATMDataAccess\obj\Debug\net6.0\ATMDataAccess.pdb
+C:\Users\linka\Documents\Project\ATMMVCApplication\ATMDataAccess\obj\Debug\net6.0\ATMDataAccess.genruntimeconfig.cache
+C:\Users\linka\Documents\Project\ATMMVCApplication\ATMDataAccess\obj\Debug\net6.0\ref\ATMDataAccess.dll
