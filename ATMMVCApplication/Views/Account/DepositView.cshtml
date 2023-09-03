@@ -1,23 +1,24 @@
-﻿@model AccountViewModel
+﻿
+@model AccountViewModel
+
 <div>
+    <header>
+        <h1>Ask Politely how much they would like to deposit in their Account!!</h1>
+    </header>
 
-    <h1>
-        Ask Politely how much they would like to depose in their Account!!
-    </h1>
+    <main>
+        <form method="post" action="~/Account/DepositFunds/AccountDetails">
 
+            <input type="hidden" name="AccountID" value="@Model.CurrentAccount.AccountID" />
 
-    <form method="post" action="~/Account/DepositFunds/AccountDetails">
-
-        <input type="hidden" name="AccountID" value="@Model.CurrentAccount.AccountID" />
-        
-        <div class="mb-3">
-            <label for="DepositAmount" class="form-label">Deposit Amount</label>
-            <input type="number" class="" name="DepositAmount">
-        </div>
-        <div>
-            <button class=" btn btn-primary"type="submit">Click me! </button>
-        </div>
-
-    </form>
-    
+            <div class="mb-3">
+                <label for="DepositAmount" class="form-label">Deposit Amount</label>
+                <input type="number" id="DepositAmount" name="DepositAmount" class="form-control">
+            </div>
+            
+            <div>
+                <button type="submit" class="btn btn-primary">Click me!</button>
+            </div>
+        </form>
+    </main>
 </div>

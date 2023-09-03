@@ -27,18 +27,12 @@ namespace ATMMVCApplication.Models
         public string? UserID { get; set; }
 
         public DateTime TransactionDate { get; set; }
-        
+
 
         public AccountModel? CurrentAccount { get; set; }
 
         public List<AccountModel>? AccountList { get; set; }
 
-        public AccountViewModel() 
-        { 
-            CurrentAccount= new AccountModel();
-            AccountList = new List<AccountModel>();
-        
-        }
     }
     
    

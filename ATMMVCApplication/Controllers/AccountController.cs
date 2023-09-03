@@ -66,9 +66,9 @@ namespace ATMMVCApplication.Controllers
                 };
                 
                var result= _repo.Update(newMoney);
-                return View("Index", model);
+               
             }
-            return View(model);
+            return RedirectToAction("Index");
             
         }
         public IActionResult DepositView () 
@@ -82,14 +82,45 @@ namespace ATMMVCApplication.Controllers
         }
         public IActionResult WithDrawnFunds(AccountViewModel model)
         {
-            model.NewBalance = model.PreviousBalance - model.WithdrawAmount;
-            // logic to withdrawn money
+            var currentAccount = _repo.GetbyID(model.AccountID);
+            decimal newBalance = 0.0m;
 
-            return View("AccountDetails", model);
+            if (currentAccount != null)
+            {
+                newBalance = currentAccount.PreviousBalance - model.DepositAmount;
+
+
+                var newMoney = new AccountModel
+                {
+                    AccountID = model.AccountID,
+                    PreviousBalance = newBalance,
+                    NewBalance = newBalance,
+                    UserID = model.UserID,
+                    WithdrawAmount = model.WithdrawAmount,
+                    CardNumber = model.CardNumber,
+                    AccountNumber = model.AccountNumber,
+                    PinNumber = model.PinNumber,
+                    DepositAmount = model.DepositAmount,
+                    FullName = model.FullName,
+                    TransactionDate = DateTime.Now,
+                    PassWord = model.PassWord,
+
+                };
+
+                var result = _repo.Update(newMoney);
+
+            }
+            return RedirectToAction("Index");
+
         }
         public IActionResult WithdrawView () 
         {
-            return View();
+            AccountViewModel myobjct1 = new AccountViewModel();
+
+            myobjct1.AccountList = _repo.GetAllAccounts();
+            myobjct1.CurrentAccount = myobjct1.AccountList.FirstOrDefault();
+
+            return View(myobjct1);
         }
 
     }

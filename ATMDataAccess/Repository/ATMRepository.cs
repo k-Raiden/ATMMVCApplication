@@ -56,8 +56,7 @@ namespace ATMDataAccess.Repository
             return acctModel.AccountID;
 
         }
-
-         public AccountModel Update(AccountModel acctModel)
+        public AccountModel Update(AccountModel acctModel)
         {
             AccountModel acctId = _context.Account.Find(acctModel.AccountID);
             acctId.AccountNumber = acctModel.AccountNumber;
@@ -72,9 +71,7 @@ namespace ATMDataAccess.Repository
 
             _context.SaveChanges();
 
-            return acctModel;    
-
-            
+            return acctModel;
 
         }
 
