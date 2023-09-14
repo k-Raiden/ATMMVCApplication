@@ -1,10 +1,5 @@
 ﻿using ATMDataAccess.Context;
 using ATMDataAccess.Model;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ATMDataAccess.Repository
 {
@@ -20,13 +15,13 @@ namespace ATMDataAccess.Repository
         public int Create(AccountModel acctModel)
         {
             Random num = new Random();
-            string result="";
+            string result = "";
 
             string numbers = "123456789";
 
             // random account Number
 
-            for (int i = 0;i<9; i++)
+            for (int i = 0; i < 9; i++)
             {
                 int number = num.Next(0, numbers.Length);
 
@@ -38,14 +33,14 @@ namespace ATMDataAccess.Repository
 
             // random card number
 
-            for (int i = 0; i < 10; i++) 
-            { 
-                int number2 =num.Next(0, numbers.Length);
+            for (int i = 0; i < 10; i++)
+            {
+                int number2 = num.Next(0, numbers.Length);
 
                 char c2 = numbers[number2];
 
                 result += c2;
-            
+
             }
 
             acctModel.CardNumber = Convert.ToInt32(result);

@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33403.182
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ATMMVCApplication", "ATMMVCApplication\ATMMVCApplication.csproj", "{571E9D99-953C-4C7D-B995-E3971694D952}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BankTellerWorkSheetApp", "ATMMVCApplication\BankTellerWorkSheetApp.csproj", "{571E9D99-953C-4C7D-B995-E3971694D952}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ATMDataAccess", "ATMDataAccess\ATMDataAccess.csproj", "{CD588D36-FD3D-4753-8C5A-85115F2BCE61}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ATMDataAccess", "ATMDataAccess\ATMDataAccess.csproj", "{CD588D36-FD3D-4753-8C5A-85115F2BCE61}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

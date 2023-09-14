@@ -34,6 +34,6 @@ namespace ATMMVCApplication.Models
         public List<AccountModel>? AccountList { get; set; }
 
     }
-    
-   
+
+
 }

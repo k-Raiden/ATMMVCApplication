@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ATMDataAccess.Model
+﻿namespace ATMDataAccess.Model
 {
     public class AccountModel
     {
@@ -16,7 +10,7 @@ namespace ATMDataAccess.Model
 
         public string? UserID { get; set; }
 
-        public string ?FullName { get; set; }
+        public string? FullName { get; set; }
 
         public int PinNumber { get; set; }
 
@@ -28,10 +22,10 @@ namespace ATMDataAccess.Model
 
         public decimal NewBalance { get; set; }
         public DateTime TransactionDate { get; set; }
-        public string? PassWord { get; set; }   
-        
+        public string? PassWord { get; set; }
 
-        public AccountModel(int accountID, int pinNumber, int accountNumber, int cardnumber, string fullName, decimal previousBalance, decimal depositAmount, decimal withdrawAmount, decimal newBalance, DateTime transactionDate,string pWord)
+
+        public AccountModel(int accountID, int pinNumber, int accountNumber, int cardnumber, string fullName, decimal previousBalance, decimal depositAmount, decimal withdrawAmount, decimal newBalance, DateTime transactionDate, string pWord)
         {
             AccountID = accountID;
             AccountNumber = accountNumber;

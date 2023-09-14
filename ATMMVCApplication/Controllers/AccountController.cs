@@ -3,7 +3,6 @@ using ATMDataAccess.Model;
 using ATMDataAccess.Repository;
 using ATMMVCApplication.Models;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Primitives;
 
 namespace ATMMVCApplication.Controllers
 {
@@ -19,18 +18,18 @@ namespace ATMMVCApplication.Controllers
         {
             AccountViewModel account = new AccountViewModel();
             account.AccountList = _repo.GetAllAccounts();
-            account.CurrentAccount =account.AccountList.FirstOrDefault();
-            
+            account.CurrentAccount = account.AccountList.FirstOrDefault();
+
             return View(account);
         }
-        
+
 
         public IActionResult AccountDetails(int id)
         {
             var account = _repo.GetbyID(id);
-            
+
             AccountViewModel model = new AccountViewModel();
-            
+
             model.CurrentAccount = account;
             return View(model);
         }
@@ -40,13 +39,13 @@ namespace ATMMVCApplication.Controllers
             var currentAccount = _repo.GetbyID(model.AccountID);
             decimal newBalance = 0.0m;
 
-            if(currentAccount != null) 
+            if (currentAccount != null)
             {
                 newBalance = currentAccount.PreviousBalance + model.DepositAmount;
-            
-                model.NewBalance= newBalance;
 
-                model.PreviousBalance= newBalance;
+                model.NewBalance = newBalance;
+
+                model.PreviousBalance = newBalance;
 
                 var newMoney = new AccountModel
                 {
@@ -64,19 +63,19 @@ namespace ATMMVCApplication.Controllers
                     PassWord = model.PassWord,
 
                 };
-                
-               var result= _repo.Update(newMoney);
-               
+
+                var result = _repo.Update(newMoney);
+
             }
             return RedirectToAction("Index");
-            
+
         }
-        public IActionResult DepositView () 
-        { 
+        public IActionResult DepositView()
+        {
             AccountViewModel myobjct = new AccountViewModel();
 
             myobjct.AccountList = _repo.GetAllAccounts();
-            myobjct.CurrentAccount= myobjct.AccountList.FirstOrDefault();
+            myobjct.CurrentAccount = myobjct.AccountList.FirstOrDefault();
 
             return View(myobjct);
         }
@@ -113,7 +112,7 @@ namespace ATMMVCApplication.Controllers
             return RedirectToAction("Index");
 
         }
-        public IActionResult WithdrawView () 
+        public IActionResult WithdrawView()
         {
             AccountViewModel myobjct1 = new AccountViewModel();
 

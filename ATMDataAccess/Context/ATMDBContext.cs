@@ -1,15 +1,10 @@
 ﻿using ATMDataAccess.Model;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ATMDataAccess.Context
 {
-    public  class ATMDBContext : DbContext
+    public class ATMDBContext : DbContext
     {
         public ATMDBContext(DbContextOptions options) : base(options)
         {
@@ -33,7 +28,7 @@ namespace ATMDataAccess.Context
                     .UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
 
                 optionsBuilder.
-                    UseSqlServer("Server=RAIDEN\\SQLEXPRESS;Database=myDataBase;Trusted_Connection=True;TrustServerCertificate=True;") ;
+                    UseSqlServer("Server=RAIDEN\\SQLEXPRESS;Database=myDataBase;Trusted_Connection=True;TrustServerCertificate=True;");
             }
         }
 
